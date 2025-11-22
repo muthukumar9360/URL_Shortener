@@ -23,7 +23,7 @@ A simple Django web application that allows users to shorten URLs and view previ
 ### 1. Clone the repository (optional)
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/muthukumar9360/URL_Shortener.git
 cd your-repo-name
 ```
 
@@ -51,30 +51,10 @@ source env/bin/activate
 
 You should now see `(env)` at the start of your terminal prompt.
 
-### 4. Install dependencies
+### 4. Apply migrations
 
 ```bash
-pip install -r requirements.txt
-```
-
-> **Note:** If `requirements.txt` doesn't exist, create it using:  
-> ```bash
-> pip freeze > requirements.txt
-> ```
-
-### 5. Set up environment variables
-
-Create a `.env` file in your project root and add any necessary variables. Example:
-
-```
-SECRET_KEY=your_django_secret_key
-DEBUG=True
-ALLOWED_HOSTS=localhost,127.0.0.1
-```
-
-### 6. Apply migrations
-
-```bash
+python manage.py makemigrations
 python manage.py migrate
 ```
 
@@ -92,9 +72,9 @@ You can now use the URL shortener app.
 ## Project Structure
 
 ```
-your-project/
+URL_Shortener/
 │
-├── urls_shortener/           # Django app
+├── shortapp/           # Django app
 │   ├── migrations/
 │   ├── templates/
 │   ├── static/
@@ -102,12 +82,11 @@ your-project/
 │   ├── views.py
 │   └── urls.py
 │
-├── project_name/             # Django project folder
+├── URL_Shortener/             # Django project folder
 │   ├── settings.py
 │   └── urls.py
 │
 ├── manage.py
-├── requirements.txt
 └── README.md
 ```
 
@@ -120,25 +99,14 @@ your-project/
 python manage.py createsuperuser
 ```
 
-- Check for broken migrations:  
-```bash
-python manage.py makemigrations
-python manage.py migrate
-```
-
 - Run tests:  
 ```bash
 python manage.py test
 ```
-
----
-
-## License
-
-This project is licensed under the MIT License.
-
 ---
 
 ## Author
 
-**Your Name** – [Your GitHub](https://github.com/your-username)
+**muthukumar9360** – [Your GitHub](https://github.com/muthukumar9360)
+
+---
