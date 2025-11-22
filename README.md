@@ -24,7 +24,7 @@ A simple Django web application that allows users to shorten URLs and view previ
 
 ```bash
 git clone https://github.com/muthukumar9360/URL_Shortener.git
-cd your-repo-name
+cd URL_Shortener
 ```
 
 ### 2. Create a virtual environment
@@ -97,11 +97,6 @@ URL_Shortener/
 - Create superuser/admin:  
 ```bash
 python manage.py createsuperuser
-```
-
-- Run tests:  
-```bash
-python manage.py test
 ```
 ---
 
