@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Page</title>
+    <style>
+        /* General body styling */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #d4fc79, #96e6a1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Container styling */
+        .container {
+            background: #ffffffdd;
+            padding: 40px 50px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 350px;
+            animation: slideUp 0.6s ease-out;
+        }
+
+        @keyframes slideUp {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Heading styling */
+        h2 {
+            color: #28a745;
+            font-size: 2em;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        /* Paragraph styling */
+        p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+
+        /* Short URL link styling */
+        a.short-link {
+            color: #4a90e2;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        a.short-link:hover {
+            color: #357ABD;
+        }
+
+        /* Home link styling */
+        a.home-link {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            background: #4a90e2;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        a.home-link:hover {
+            background: #357ABD;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Short URL Created!</h2>
+        <p>Your short link: <a href="{{ short_url }}" class="short-link">{{ short_url }}</a></p>
+        <a href="/" class="home-link">Go Home</a>
+    </div>
+</body>
+
+</html>
